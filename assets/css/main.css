@@ -2752,6 +2752,7 @@ ul.posts article header > :last-child {
 }
 .links {
   font-size: 1.5em;
+  margin-bottom: 50px;
 }
 
 .mini-post .image {
@@ -3721,7 +3722,7 @@ body.is-menu-visible #menu {
 }
 #dynamicText {
   font-size: 1.5em;
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .toggleDarkMode {
@@ -3735,8 +3736,10 @@ body.is-menu-visible #menu {
   visibility: visible;
   font-size: 1.5em;
 }
-.profilePic {
+#hexImage {
+  margin: 50px auto;
+  background: transparent;
 }
-#hexBorder {
-  transform: rotate(90deg);
+#linkContainer {
+  margin-bottom: 25px;
 }

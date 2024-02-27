@@ -157,6 +157,7 @@ function darkmode() {
   document.querySelector(".toggleDarkMode").style.filter = "invert(100%)";
   document.querySelector(".fa-sun").style.visibility = "visible";
   document.querySelector(".fa-moon").style.visibility = "hidden";
+  document.querySelector("#hexImage").style.filter = "invert(100%)";
 }
 
 //THE LIGHTMODE SETTING
@@ -167,4 +168,5 @@ function lightmode() {
   document.querySelector(".toggleDarkMode").style.filter = "invert(0%)";
   document.querySelector(".fa-sun").style.visibility = "hidden";
   document.querySelector(".fa-moon").style.visibility = "visible";
+  document.querySelector("#hexImage").style.filter = "invert(0%)";
 }
