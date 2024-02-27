@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="toggleDarkMode">
   <head>
     <title>Cameron Kauten's Portfolio</title>
     <meta charset="utf-8" />
@@ -11,14 +11,20 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header">
-        <h1><a href="index.html">Home</a></h1>
+        <h1 id="homeButton"><a href="index.html">Home</a></h1>
         <nav class="links">
           <ul>
+            <li><a href="#">Contact</a></li>
             <li><a href="#">My Story</a></li>
             <li><a href="#">Ipsum</a></li>
             <li><a href="#">Feugiat</a></li>
             <li><a href="#">Tempus</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-solid fa-sun" style="color: #0c5be4"></i>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -76,13 +82,22 @@
         <article class="post">
           <header>
             <div class="title">
-              <h2><a href="single.html">My name is Cameron</a></h2>
-              <p id="webDeveloper">I am your next Web Developer</p>
+              <h2>
+                <a href="single.html"
+                  >My name
+                  <br />
+                  is Cameron</a
+                >
+              </h2>
+              <p id="dynamicText">
+                I am a<span id="jobTitle"></span><span id="cursor">|</span>
+              </p>
             </div>
-          </header>
-          <a href="single.html" class="image featured"
-            ><img src="images/pic01.jpg" alt=""
+            <a href="single.html" class="image featured"
+            ><img id="hexBorder" src="images/hexagon.svg" alt=""
           /></a>
+          </header>
+
           <p>
             Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.
             Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna
@@ -104,53 +119,7 @@
             </ul>
           </footer>
         </article>
-
-        <!-- Post -->
         <!-- <article class="post">
-          <header>
-            <div class="title">
-              <h2>
-                <a href="single.html"
-                  >Ultricies sed magna euismod enim vitae HIIII</a
-                >
-              </h2>
-              <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-            </div> -->
-        <!-- <div class="meta">
-              <time class="published" datetime="2015-10-25"
-                >October 25, 2015</time
-              > -->
-        <!-- <a href="#" class="author"
-                ><span class="name">Jane Doe</span
-                ><img src="images/avatar.jpg" alt=""
-              /></a>
-            </div>
-          </header>
-          <a href="single.html" class="image featured"
-            ><img src="images/pic02.jpg" alt=""
-          /></a>
-          <p>
-            Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.
-            Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna
-            enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non
-            congue ullam corper.
-          </p>
-          <footer>
-            <ul class="actions">
-              <li>
-                <a href="single.html" class="button large">Continue Reading</a>
-              </li>
-            </ul>
-            <ul class="stats">
-              <li><a href="#">General</a></li>
-              <li><a href="#" class="icon solid fa-heart">28</a></li>
-              <li><a href="#" class="icon solid fa-comment">128</a></li>
-            </ul>
-          </footer>
-        </article>
-
-        <!-- Post -->
-        <article class="post">
           <header>
             <div class="title">
               <h2><a href="single.html">Euismod et accumsan</a></h2>
@@ -190,7 +159,7 @@
               <li><a href="#" class="icon solid fa-comment">128</a></li>
             </ul>
           </footer>
-        </article>
+        </article> -->
 
         <!-- Pagination -->
         <ul class="actions pagination">
@@ -213,162 +182,50 @@
             </h2>
             <p>Reach out and let's start a conversation!</p>
           </header>
+          <a
+              class="links"
+              id="emailLink"
+              href="mailto:cameron.kauten@gmail.com"
+              ><i class="fa-solid fa-envelope"></i> cameron.kauten@gmail.com</a>
+            <a class="links" id="githubLink" href="https://github.com/ckauten"
+                ><i class="fa-brands fa-github"></i> github/ckauten</a
+              >
+
         </section>
 
         <!-- Link One -->
         <section>
           <div class="mini-posts">
             <!-- Mini Post -->
-            <a
-              class="links"
-              id="emailLink"
-              href="mailto:cameron.kauten@gmail.com"
-              ><i class="fa-solid fa-envelope"></i> cameron.kauten@gmail.com</a
-            >
-            <a class="links" id="githubLink" href="https://github.com/ckauten"
-              >github/ckauten</a
-            >
-            <!-- LINK TWO -->
+            
 
-            <!-- <article class="mini-post">
-              <header>
-                <h3><a href="single.html">Rutrum neque accumsan</a></h3>
-                <time class="published" datetime="2015-10-19"
-                  >October 19, 2015</time
-                >
-                <a href="#" class="author"
-                  ><img src="images/avatar.jpg" alt=""
-                /></a>
-              </header>
-              <a href="single.html" class="image"
-                ><img src="images/pic05.jpg" alt=""
-              /></a>
+            <!-- BLANK -->
+
+            <!-- LINK TWO
+
+            <article class="mini-post">
+              <a class="links" id="githubLink" href="https://github.com/ckauten"
+                ><i class="fa-brands fa-github"></i> github/ckauten</a
+              >
             </article> -->
 
-            <!-- Mini Post -->
+            <!-- LINK THREE -->
             <article class="mini-post">
-              <header>
-                <h3><a href="single.html">Odio congue mattis</a></h3>
-                <time class="published" datetime="2015-10-18"
-                  >October 18, 2015</time
-                >
-                <a href="#" class="author"
-                  ><img src="images/avatar.jpg" alt=""
-                /></a>
-              </header>
-              <a href="single.html" class="image"
-                ><img src="images/pic06.jpg" alt=""
-              /></a>
+              <a class="links" id="githubLink" href="https://github.com/ckauten"
+                ><i class="fa-brands fa-linkedin"></i> linkedin/cameronkauten</a
+              >
+            </article>
+
+            <article class="mini-post">
+              <a class="links" id="githubLink" href="https://github.com/ckauten"
+                ><i class="fa-brands fa-github"></i> github/ckauten</a
+              >
             </article>
 
             <!-- Mini Post -->
-            <article class="mini-post">
-              <header>
-                <h3><a href="single.html">Enim nisl veroeros</a></h3>
-                <time class="published" datetime="2015-10-17"
-                  >October 17, 2015</time
-                >
-                <a href="#" class="author"
-                  ><img src="images/avatar.jpg" alt=""
-                /></a>
-              </header>
-              <a href="single.html" class="image"
-                ><img src="images/pic07.jpg" alt=""
-              /></a>
-            </article>
-          </div>
-        </section>
-
-        <!-- Posts List -->
-        <section>
-          <ul class="posts">
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href="single.html"
-                      >Lorem ipsum fermentum ut nisl vitae</a
-                    >
-                  </h3>
-                  <time class="published" datetime="2015-10-20"
-                    >October 20, 2015</time
-                  >
-                </header>
-                <a href="single.html" class="image"
-                  ><img src="images/pic08.jpg" alt=""
-                /></a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href="single.html"
-                      >Convallis maximus nisl mattis nunc id lorem</a
-                    >
-                  </h3>
-                  <time class="published" datetime="2015-10-15"
-                    >October 15, 2015</time
-                  >
-                </header>
-                <a href="single.html" class="image"
-                  ><img src="images/pic09.jpg" alt=""
-                /></a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href="single.html"
-                      >Euismod amet placerat vivamus porttitor</a
-                    >
-                  </h3>
-                  <time class="published" datetime="2015-10-10"
-                    >October 10, 2015</time
-                  >
-                </header>
-                <a href="single.html" class="image"
-                  ><img src="images/pic10.jpg" alt=""
-                /></a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href="single.html"
-                      >Magna enim accumsan tortor cursus ultricies</a
-                    >
-                  </h3>
-                  <time class="published" datetime="2015-10-08"
-                    >October 8, 2015</time
-                  >
-                </header>
-                <a href="single.html" class="image"
-                  ><img src="images/pic11.jpg" alt=""
-                /></a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href="single.html"
-                      >Congue ullam corper lorem ipsum dolor</a
-                    >
-                  </h3>
-                  <time class="published" datetime="2015-10-06"
-                    >October 7, 2015</time
-                  >
-                </header>
-                <a href="single.html" class="image"
-                  ><img src="images/pic12.jpg" alt=""
-                /></a>
-              </article>
-            </li>
-          </ul>
-        </section>
+            <a class="links" id="githubLink" href="https://github.com/ckauten"
+            ><i class="fa-brands fa-github"></i> github/ckauten</a
+          >
 
         <!-- About -->
         <section class="blurb">
