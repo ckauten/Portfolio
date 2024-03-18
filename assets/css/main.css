@@ -1925,9 +1925,7 @@ hr.major {
   border-bottom-color: transparent;
 }
 
-/* Blurb */
-
-.blurb h2 {
+/* Blurb .blurb h2 {
   font-size: 0.8em;
   margin: 0 0 1.5em 0;
 }
@@ -1938,27 +1936,7 @@ hr.major {
 
 .blurb p {
   font-size: 0.9em;
-}
-
-/* Box */
-
-.box {
-  border: solid 1px rgba(160, 160, 160, 0.3);
-  margin-bottom: 2em;
-  padding: 1.5em;
-}
-
-.box > :last-child,
-.box > :last-child > :last-child,
-.box > :last-child > :last-child > :last-child {
-  margin-bottom: 0;
-}
-
-.box.alt {
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-}
+} */
 
 /* Button */
 
@@ -1971,12 +1949,9 @@ button,
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  -moz-transition: background-color 0.2s ease, box-shadow 0.2s ease,
-    color 0.2s ease;
-  -webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease,
-    color 0.2s ease;
-  -ms-transition: background-color 0.2s ease, box-shadow 0.2s ease,
-    color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  -ms-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   background-color: transparent;
   border: 0;

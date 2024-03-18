@@ -17,8 +17,8 @@
             <li><a href="#">My Story</a></li>
             <li><a href="#">My Work</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Feugiat</a></li>
-            <li><a href="#">Tempus</a></li>
+            <!-- <li><a href="#">Feugiat</a></li> -->
+            <!-- <li><a href="#">Tempus</a></li> -->
             <li>
               <a href="#">
                 <i class="fa-regular fa-moon"></i>
@@ -191,17 +191,18 @@
             <a class="links" id="githubLink" href="https://www.linkedin.com/in/cameronkauten/"><i class="fa-brands fa-linkedin"></i> linkedin/cameronkauten</a>
           </section>
         <!-- About -->
-        <section class="blurb">
-          <h2>About</h2>
-          <p>
-            Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.
-            Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor
-            magna enim, ac accumsan tortor cursus at phasellus sed ultricies.
-          </p>
-          <ul class="actions">
-            <li><a href="#" class="button">Learn More</a></li>
-          </ul>
-        </section>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+          <fieldset id="fs-frm-inputs">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          </fieldset>
+          <input id="formSubmit" type="submit" value="Submit">
+        </form>
 
         <!-- Footer -->
         <section id="footer">
