@@ -134,10 +134,7 @@ function changeJobTitle() {
 
 function deleteText(index, length, speed, callback) {
   if (index <= length) {
-    jobTitleSpan.textContent = jobTitleSpan.textContent.substring(
-      0,
-      length - index
-    );
+    jobTitleSpan.textContent = jobTitleSpan.textContent.substring(0, length - index);
     index++;
     setTimeout(function () {
       deleteText(index, length, speed, callback);
