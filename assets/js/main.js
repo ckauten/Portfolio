@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", checkDarkMode);
+
 (function ($) {
   var $window = $(window),
     $body = $("body"),
@@ -89,7 +91,7 @@ var jobTitles = [
   " Coding Wizard",
   " Problem Solver",
   " Digital Sorcerer",
-  " Innovation Ninja",
+  "n Innovation Ninja",
   " Code Explorer",
   " Pixel Prodigy",
   " Code Artisan",
@@ -105,8 +107,14 @@ var jobTitles = [
   " Dreamer",
 ];
 
-var dynamicText = document.getElementById("dynamicText");
-var jobTitleSpan = document.getElementById("jobTitle");
+//VARIABLES
+
+let toggleDarkMode = document.querySelector(".toggleDarkMode");
+let sun = document.querySelector(".fa-sun");
+let moon = document.querySelector(".fa-moon");
+let dynamicText = document.getElementById("dynamicText");
+let jobTitleSpan = document.querySelector("#jobTitle");
+let hexImage = document.querySelector("#hexImage");
 
 function typeText(index, text, speed) {
   if (index < text.length) {
@@ -148,22 +156,32 @@ typeText(0, jobTitleSpan.textContent, 50);
 
 //THE DARKMODE SETTING
 
-document.querySelector(".fa-moon").addEventListener("click", darkmode);
+function checkDarkMode() {
+  if (localStorage.getItem("darkmode") === "true") {
+    darkmode();
+  } else {
+    lightmode();
+  }
+}
+
+moon.addEventListener("click", darkmode);
 
 function darkmode() {
-  document.querySelector(".toggleDarkMode").style.filter = "invert(100%)";
-  document.querySelector(".fa-sun").style.visibility = "visible";
-  document.querySelector(".fa-moon").style.visibility = "hidden";
-  document.querySelector("#hexImage").style.filter = "invert(100%)";
+  toggleDarkMode.style.filter = "invert(100%)";
+  sun.style.visibility = "visible";
+  moon.style.visibility = "hidden";
+  hexImage.style.filter = "invert(100%)";
+  localStorage.setItem("darkmode", "true");
 }
 
 //THE LIGHTMODE SETTING
 
-document.querySelector(".fa-sun").addEventListener("click", lightmode);
+sun.addEventListener("click", lightmode);
 
 function lightmode() {
-  document.querySelector(".toggleDarkMode").style.filter = "invert(0%)";
-  document.querySelector(".fa-sun").style.visibility = "hidden";
-  document.querySelector(".fa-moon").style.visibility = "visible";
-  document.querySelector("#hexImage").style.filter = "invert(0%)";
+  toggleDarkMode.style.filter = "invert(0%)";
+  sun.style.visibility = "hidden";
+  moon.style.visibility = "visible";
+  hexImage.style.filter = "invert(0%)";
+  localStorage.setItem("darkmode", "false");
 }
