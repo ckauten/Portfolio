@@ -3380,6 +3380,13 @@ body {
   #header {
     justify-content: center;
   }
+  #projectContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -3746,7 +3753,6 @@ body.is-menu-visible #menu {
 #projectContainer {
   width: 50vw;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   margin: 0 auto;
 }
