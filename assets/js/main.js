@@ -1,25 +1,25 @@
-document.addEventListener("DOMContentLoaded", checkDarkMode);
+document.addEventListener('DOMContentLoaded', checkDarkMode);
 
 (function ($) {
   var $window = $(window),
-    $body = $("body"),
-    $menu = $("#menu"),
-    $sidebar = $("#sidebar"),
-    $main = $("#main");
+    $body = $('body'),
+    $menu = $('#menu'),
+    $sidebar = $('#sidebar'),
+    $main = $('#main');
 
   // Breakpoints.
   breakpoints({
-    xlarge: ["1281px", "1680px"],
-    large: ["981px", "1280px"],
-    medium: ["737px", "980px"],
-    small: ["481px", "736px"],
-    xsmall: [null, "480px"],
+    xlarge: ['1281px', '1680px'],
+    large: ['981px', '1280px'],
+    medium: ['737px', '980px'],
+    small: ['481px', '736px'],
+    xsmall: [null, '480px'],
   });
 
   // Play initial animations on page load.
-  $window.on("load", function () {
+  $window.on('load', function () {
     window.setTimeout(function () {
-      $body.removeClass("is-preload");
+      $body.removeClass('is-preload');
     }, 100);
   });
 
@@ -30,25 +30,25 @@ document.addEventListener("DOMContentLoaded", checkDarkMode);
     hideOnSwipe: true,
     resetScroll: true,
     resetForms: true,
-    side: "right",
+    side: 'right',
     target: $body,
-    visibleClass: "is-menu-visible",
+    visibleClass: 'is-menu-visible',
   });
 
   // Search (header).
-  var $search = $("#search"),
-    $search_input = $search.find("input");
+  var $search = $('#search'),
+    $search_input = $search.find('input');
 
-  $body.on("click", '[href="#search"]', function (event) {
+  $body.on('click', '[href="#search"]', function (event) {
     event.preventDefault();
 
     // Not visible?
-    if (!$search.hasClass("visible")) {
+    if (!$search.hasClass('visible')) {
       // Reset form.
       $search[0].reset();
 
       // Show.
-      $search.addClass("visible");
+      $search.addClass('visible');
 
       // Focus input.
       $search_input.focus();
@@ -56,65 +56,56 @@ document.addEventListener("DOMContentLoaded", checkDarkMode);
   });
 
   $search_input
-    .on("keydown", function (event) {
+    .on('keydown', function (event) {
       if (event.keyCode == 27) $search_input.blur();
     })
-    .on("blur", function () {
+    .on('blur', function () {
       window.setTimeout(function () {
-        $search.removeClass("visible");
+        $search.removeClass('visible');
       }, 100);
     });
 
   // Intro.
-  var $intro = $("#intro");
-
-  // Move to main on <=large, back to sidebar on >large.
-  breakpoints.on("<=large", function () {
-    $intro.prependTo($main);
-  });
-
-  breakpoints.on(">large", function () {
-    $intro.prependTo($sidebar);
-  });
+  var $intro = $('#intro');
 })(jQuery);
 
 //THE ANIMATION
 var jobTitles = [
-  " Software Engineer",
-  " Full Stack Web Developer",
-  "n HTML Hero",
-  " CSS Champion",
-  " JavaScript Journeyman",
-  " Digital Dreamweaver",
-  "n Algorithm Artisan",
-  " Tech Enthusiast",
-  " Coding Wizard",
-  " Problem Solver",
-  " Digital Sorcerer",
-  "n Innovation Ninja",
-  " Code Explorer",
-  " Pixel Prodigy",
-  " Code Artisan",
-  " Tech Maverick",
-  " Full Stack Ninja",
-  " Software Craftsman",
-  " Code Whisperer",
-  " Scripting Guru",
-  " Digital Maestro",
-  " Tech Artisan",
-  " Backend Virtuoso",
-  " Frontend Guru",
-  " Dreamer",
+  ' Software Engineer',
+  ' Full Stack Web Developer',
+  'n HTML Hero',
+  ' CSS Champion',
+  ' JavaScript Journeyman',
+  ' Digital Dreamweaver',
+  'n Algorithm Artisan',
+  ' Tech Enthusiast',
+  ' Coding Wizard',
+  ' Problem Solver',
+  ' Digital Sorcerer',
+  'n Innovation Ninja',
+  ' Code Explorer',
+  ' Pixel Prodigy',
+  ' Code Artisan',
+  ' Tech Maverick',
+  ' Full Stack Ninja',
+  ' Software Craftsman',
+  ' Code Whisperer',
+  ' Scripting Guru',
+  ' Digital Maestro',
+  ' Tech Artisan',
+  ' Backend Virtuoso',
+  ' Frontend Guru',
+  ' Dreamer',
 ];
 
 //VARIABLES
 
-let toggleDarkMode = document.querySelector(".toggleDarkMode");
-let sun = document.querySelector(".fa-sun");
-let moon = document.querySelector(".fa-moon");
-let dynamicText = document.getElementById("dynamicText");
-let jobTitleSpan = document.querySelector("#jobTitle");
-let hexImage = document.querySelector("#hexImage");
+let toggleDarkMode = document.querySelector('.toggleDarkMode');
+let sun = document.querySelector('.fa-sun');
+let moon = document.querySelector('.fa-moon');
+let dynamicText = document.getElementById('dynamicText');
+let jobTitleSpan = document.querySelector('#jobTitle');
+let hexImage = document.querySelector('#hexImage');
 
 function typeText(index, text, speed) {
   if (index < text.length) {
@@ -157,31 +148,31 @@ typeText(0, jobTitleSpan.textContent, 50);
 //THE DARKMODE SETTING
 
 function checkDarkMode() {
-  if (localStorage.getItem("darkmode") === "true") {
+  if (localStorage.getItem('darkmode') === 'true') {
     darkmode();
   } else {
     lightmode();
   }
 }
 
-moon.addEventListener("click", darkmode);
+moon.addEventListener('click', darkmode);
 
 function darkmode() {
-  toggleDarkMode.style.filter = "invert(100%)";
-  sun.style.visibility = "visible";
-  moon.style.visibility = "hidden";
-  hexImage.style.filter = "invert(100%)";
-  localStorage.setItem("darkmode", "true");
+  toggleDarkMode.style.filter = 'invert(100%)';
+  sun.style.visibility = 'visible';
+  moon.style.visibility = 'hidden';
+  hexImage.style.filter = 'invert(100%)';
+  localStorage.setItem('darkmode', 'true');
 }
 
 //THE LIGHTMODE SETTING
 
-sun.addEventListener("click", lightmode);
+sun.addEventListener('click', lightmode);
 
 function lightmode() {
-  toggleDarkMode.style.filter = "invert(0%)";
-  sun.style.visibility = "hidden";
-  moon.style.visibility = "visible";
-  hexImage.style.filter = "invert(0%)";
-  localStorage.setItem("darkmode", "false");
+  toggleDarkMode.style.filter = 'invert(0%)';
+  sun.style.visibility = 'hidden';
+  moon.style.visibility = 'visible';
+  hexImage.style.filter = 'invert(0%)';
+  localStorage.setItem('darkmode', 'false');
 }

@@ -35,6 +35,4 @@ function lightmode() {
   sun.style.visibility = 'hidden';
   moon.style.visibility = 'visible';
   localStorage.setItem('darkmode', 'false');
-  prevail.style.filter = 'invert(0%)';
-  brainwave.style.filter = 'invert(0%)';
 }
