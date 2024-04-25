@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', checkDarkMode);
 let toggleDarkMode = document.querySelector('.toggleDarkMode');
 let sun = document.querySelector('.fa-sun');
 let moon = document.querySelector('.fa-moon');
-let prevail = document.getElementById('#prevail');
-let brainwave = document.querySelector('#brainwave');
+let carousel = document.querySelector('#carosel');
 
 //THE DARKMODE SETTING
 
@@ -24,6 +23,7 @@ function darkmode() {
   sun.style.visibility = 'visible';
   moon.style.visibility = 'hidden';
   localStorage.setItem('darkmode', 'true');
+  carousel.style.filter = 'invert(100%)';
 }
 
 //THE LIGHTMODE SETTING
@@ -35,4 +35,5 @@ function lightmode() {
   sun.style.visibility = 'hidden';
   moon.style.visibility = 'visible';
   localStorage.setItem('darkmode', 'false');
+  carousel.style.filter = 'invert(0%)';
 }
