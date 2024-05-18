@@ -3788,6 +3788,12 @@ body.is-menu-visible #menu {
 #brainwave {
   background: rgb(255, 245, 192);
 }
+#redline {
+  background: rgb(123, 3, 3);
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+}
 
 #brainwave,
 #BRai {
