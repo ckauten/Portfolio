@@ -14,7 +14,7 @@ When building this site, my main focus was on accessibility, ensuring it's viewa
 
 Plan out darkmode/lightmode settings before getting very far commited into styling and colors! It would have been way easier to add the feature in early than backtrack.
 
-## Examples:
+## Other Work:
 
 Take a look at these couple examples that I have in my own portfolio:
 
