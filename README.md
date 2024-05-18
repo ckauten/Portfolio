@@ -1,6 +1,6 @@
 # My Awesome Project
 
-"Welcome to my portfolio! This simple, static site highlights my work and shares a bit about me."
+Welcome to my portfolio! This simple, static site highlights my work and shares a bit about me.
 
 **Link to project:** http://cameronkauten.com/
 
