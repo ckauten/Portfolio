@@ -1,4 +1,4 @@
-# My Awesome Project
+# Prevail
 
 Welcome to my portfolio! This simple, static site highlights my work and shares a bit about me.
 
