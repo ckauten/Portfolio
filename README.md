@@ -6,7 +6,7 @@ Welcome to my portfolio! This simple, static site highlights my work and shares 
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript and just a little bit of sass
+**Tech used:** HTML, CSS, SCSS, jQuery and JavaScript
 
 When building this site, my main focus was on accessibility, ensuring it's viewable on any device. The design is straightforward, featuring a dark mode/light mode toggle. It's built using flexbox and responsive design principles for optimal performance across all screen sizes.
 
