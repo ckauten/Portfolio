@@ -2883,6 +2883,7 @@ body.is-menu-visible #wrapper {
     justify-content: center;
     align-items: center;
     margin: auto;
+    align-content: center;
   }
 }
 
