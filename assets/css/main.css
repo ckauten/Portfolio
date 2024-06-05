@@ -3211,7 +3211,7 @@ body.is-menu-visible #menu {
 .prevail {
   height: 10em;
   width: 10em;
-  background-image: url('C:/Users/camer/ProjectsLocal/Portfolio/images/prevail-gif.gif');
+  background-image: url('../../images/prevail-gif.gif');
   background-position: center;
   background-size: contain;
   border-radius: 1em;
@@ -3229,7 +3229,7 @@ body.is-menu-visible #menu {
 .redline {
   height: 10em;
   width: 10em;
-  background-image: url('C:/Users/camer/ProjectsLocal/Portfolio/images/redline-gif.gif');
+  background-image: url('../../images/redline-gif.gif');
   background-attachment: local;
   background-position: center;
   background-size: contain;
