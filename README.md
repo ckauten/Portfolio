@@ -16,7 +16,7 @@ Plan out darkmode/lightmode settings before getting very far commited into styli
 
 ## Other Work:
 
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at my other work:
 
 **Prevail:** https://github.com/ckauten/prevail-v2
 
