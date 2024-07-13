@@ -3181,7 +3181,7 @@ body.is-menu-visible #menu {
   font-weight: 400;
   font-size: 0.75em; */
   display: flex;
-  width: 50%;
+  width: 80%;
 }
 /* #myWorkBody {
   display: flex;
